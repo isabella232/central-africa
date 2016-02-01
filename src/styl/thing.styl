@@ -1,0 +1,44 @@
+/*
+ * Config
+ */
+border-radius()
+  -webkit-border-radius: arguments
+  -moz-border-radius: arguments
+  border-radius: arguments
+
+/*
+ * Thing styles
+ */
+#map
+  max-width: 640px
+
+svg
+  background-color: $qz-map-water
+  border: 1px solid $qz-map-graticule
+
+.countries path
+  stroke: $qz-map-land-stroke
+  stroke-width: 1px
+  fill: $qz-map-land-fill
+
+  &.central-africa
+    fill: #ddabc1
+
+.arrows path {
+  stroke-width: 1px;
+  stroke: $qz-body-black;
+  fill: none;
+}
+
+.labels text
+  fill: $qz-gray-3
+  font-family: 'AdelleSans-Regular', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  font-size: 12px
+
+/*
+ * Media queries
+ */
+@media screen and (max-width: 600px)
+  .countries path
+    stroke-width: 0.5px
