@@ -145,7 +145,7 @@ function renderMap(config) {
      * Setup
      */
     var aspectRatio = 1 / 1.25;
-    var defaultScale = 800;
+    var defaultScale = 825;
 
     var margins = {
       top: 0,
@@ -161,7 +161,7 @@ function renderMap(config) {
     var chartWidth = width - (margins['left'] + margins['right']);
     var chartHeight = height - (margins['top'] + margins['bottom']);
 
-    var mapCenter = [10, 0];
+    var mapCenter = [10, 2];
     var scaleFactor = chartWidth / DEFAULT_WIDTH;
     var mapScale = scaleFactor * defaultScale;
 
