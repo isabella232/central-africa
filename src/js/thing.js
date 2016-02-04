@@ -115,14 +115,13 @@ function init() {
 }
 
 function onResize() {
-	console.log('resizing');
   render()
 }
 
 function render() {
-  var width = $('#map').width();
+  var map_width = $('#map').width();
 
-  if (width <= MOBILE_THRESHOLD) {
+  if (map_width <= MOBILE_THRESHOLD) {
       isMobile = true;
   } else {
       isMobile = false;
@@ -130,7 +129,7 @@ function render() {
 
   renderMap({
     container: '#map',
-    width: width,
+    width: map_width,
     countries: countriesData
   });
 
@@ -165,10 +164,6 @@ function renderMap(config) {
     var mapCenter = [10, 2];
     var scaleFactor = chartWidth / DEFAULT_WIDTH;
     var mapScale = scaleFactor * defaultScale;
-
-		console.log(config['width']);
-		console.log(scaleFactor);
-		console.log(mapScale);
 
     var projection = d3.geo.robinson()
       .center(mapCenter)
